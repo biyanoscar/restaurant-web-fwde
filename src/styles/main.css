@@ -191,6 +191,9 @@ main {
 
 .restaurant-item__thumbnail {
     width: 100%;
+    height: 50%;
+    vertical-align: middle;
+    object-fit: cover;
 }
 
 .restaurant-item__date {
@@ -207,7 +210,6 @@ main {
 .restaurant-item__title {
     font-weight: 500;
     font-size: 16px;
-    margin-top: 16px;
     transition: 0.3s opacity;
 }
 
@@ -269,6 +271,47 @@ footer a {
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 3; /* number of lines to show */
+    -webkit-line-clamp: 4; /* number of lines to show */
     -webkit-box-orient: vertical;
  }
+
+
+
+ /* badge */
+ .restaurant-item .list-card-image {
+    position: relative;
+    z-index: -1;
+}
+
+ .restaurant-item .rating {
+    right: 12px;
+    bottom: 12px;
+}
+
+.position-absolute {
+    position: absolute!important;
+}
+
+.badge {
+    font-size: 0.8em;
+    padding: 5px 5px;
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075)!important;
+    font-weight: 700;
+}
+
+.badge-rating {
+    color: #fff;
+    background-color: #28a745;
+    
+}
+
+.badge-city {
+    color: #fff;
+    background-color: #343a40;
+}
+
+
+.restaurant-item .member-plan {
+    left: 8px;
+    top: 8px;
+}
