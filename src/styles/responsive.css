@@ -39,6 +39,9 @@
     .header__menu {
         display: none;
     }
+    .restaurant-item__thumbnail {
+        height: 200px;
+    }
 }
 
 @media screen and (min-width: 650px) {

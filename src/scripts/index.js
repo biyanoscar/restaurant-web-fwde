@@ -5,7 +5,7 @@ import '../styles/menu.css';
 import data from "../DATA.json";
 
 console.log('Hello Coders! :)');
-// console.log(data);
+
 
 const menu = document.querySelector('#menu');
 const hero = document.querySelector('.hero');
@@ -20,10 +20,7 @@ menuBtn.addEventListener('click', function (event) {
     event.stopPropagation();
 });
 
-// menu.addEventListener('click', function (event) {
-//     drawer.classList.toggle('open');
-//     event.stopPropagation();
-// });
+
 
 hero.addEventListener('click', function () {
     drawer.classList.remove('open');
@@ -35,9 +32,6 @@ main.addEventListener('click', function () {
 
 
 
-
-
-// console.log(data.restaurants);
 
 //loop show data
 data.restaurants.forEach(addRestaurantCard);
@@ -62,6 +56,5 @@ function addRestaurantCard(item, index) {
             
         </div>
     </article>`
-    //   document.getElementById("demo").innerHTML += index + ":" + item + "<br>";
-    // console.log(item['name']);
+
 }

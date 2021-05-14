@@ -83,11 +83,7 @@ a:hover, a:focus { color: #f35b3f; border: 0; text-decoration: none; }
 
 .top-menu .logo { float: left; width: 20%; text-align: left; }
 
-/* .top-menu .logo a {
-	display: inline-block; width: 123px; height: 40px; 
-	background: url(../img/logo.png) left center no-repeat; border: 0;
-	text-indent: -999999px;
-} */
+
 
 .top-menu .navigation { float: left; width: 70%; text-align: right; }
 
@@ -167,9 +163,6 @@ only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
 	
-	/* logo */
-    /* .top-menu .logo a {
-    	background-image: url(../img/logo@2x.png) !important; background-repeat: no-repeat !important; background-size: 123px 33px !important;
-    } */
+
 	
 }
