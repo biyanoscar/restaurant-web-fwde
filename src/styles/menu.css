@@ -43,7 +43,9 @@ a:hover, a:focus { color: #f35b3f; border: 0; text-decoration: none; }
 .hamburger-button { position: relative; max-width: 1140px; margin: 0 auto; }
 
 .hamburger-button button {
-	position: absolute; top: 10px; right: 0; width: 40px; height: 40px; 
+	position: absolute; top: 10px; right: 0; 
+	width: 3.7em; 
+	height: 3.7em; 
 	background: none; border: 0; box-shadow: none; 
 	cursor: pointer; vertical-align: middle; z-index: 999;
 }
@@ -70,26 +72,42 @@ a:hover, a:focus { color: #f35b3f; border: 0; text-decoration: none; }
 /* Menu code */
 
 .top-menu {
-	position: fixed; 
-    top: -80px; 
+	position: fixed;
+	
+    top: -110px; 
     left: 0; width: 100%; padding: 10px 0; background: #222831;
 	box-shadow: 0 2px 5px 1px rgba(51, 51, 51, 0.5);
 	transition: all .5s cubic-bezier(0.250, 0.250, 0.750, 0.750);
+
+	
 }
 
 .top-menu.active { top: 0; }
 
-.top-menu .components { max-width: 1140px; margin: 0 auto; overflow: hidden; }
+.top-menu .components { 
+	max-width: 1140px; 
+	margin: 0 auto; 
+	overflow: hidden; 
 
-.top-menu .logo { float: left; width: 20%; text-align: left; }
+	display: flex; 
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.top-menu .logo { width: 20%; text-align: left; }
 
 
 
-.top-menu .navigation { float: left; width: 70%; text-align: right; }
+.top-menu .navigation { width: 70%; text-align: right; }
 
 .top-menu .navigation li { display: inline-block; }
 
-.top-menu .navigation li a { display: inline-block; padding: 5px 10px; color: #fff; border: 0; }
+.top-menu .navigation li a { 
+	display: inline-block; 
+	padding: 1em; 
+	color: #fff; 
+	border: 0; }
 .top-menu .navigation li a:hover,
 .top-menu .navigation li a:focus { color: #ccc; border: 0; outline: 0; }
 
@@ -99,24 +117,30 @@ a:hover, a:focus { color: #f35b3f; border: 0; text-decoration: none; }
     text-decoration: none;
     font-weight: 300;
     font-size: 1.5em;
-    margin: 0.5em 0.25em;
     display: inline-block;
     color: #fff;
+	padding: 0.6em;
 }
 
 
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 992px) {
 	
-	.top-menu .components { max-width: 992px; padding-left: 15px; padding-right: 15px; }
+	.top-menu .components { 
+		max-width: 992px; padding-left: 15px; padding-right: 15px; 
+		width: 70%;
+	}
 	
-	.hamburger-button { max-width: 992px; }
+
 	.hamburger-button button { right: 15px; }
 	
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
 
-	.top-menu .components { max-width: 768px; padding-left: 15px; padding-right: 15px; }
+	.top-menu .components { 
+		max-width: 768px; padding-left: 15px; padding-right: 15px; 
+		width: 75%;
+	}
 	
 	.hamburger-button { max-width: 768px; }
 	.hamburger-button button { right: 15px; }
@@ -129,8 +153,8 @@ a:hover, a:focus { color: #f35b3f; border: 0; text-decoration: none; }
     .top-menu.active { top: -300px; transition: all 1.2s cubic-bezier(0.250, 0.250, 0.750, 0.750); }
 	
 	.top-menu .components { max-width: 100%; padding-top: 50px; }
-	.top-menu .logo { float: none; width: 100%; text-align: center; }
-	.top-menu .navigation { float: none; width: 100%; text-align: center; }
+	.top-menu .logo {  width: 100%; text-align: center; }
+	.top-menu .navigation {  width: 100%; text-align: center; }
 	
 	.hamburger-button { width: 40px; }
 	
