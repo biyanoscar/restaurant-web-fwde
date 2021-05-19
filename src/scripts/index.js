@@ -38,7 +38,7 @@ data.restaurants.forEach(addRestaurantCard);
 
 function addRestaurantCard(item, index) {
     document.getElementById("restaurants").innerHTML +=
-    `<article class="restaurant-item" tabindex="${index+10}">
+    `<article class="restaurant-item" tabindex="0">
         <div class="list-card-image">
             <div class="rating position-absolute">
                 <span class="badge badge-rating">Rating: ${item['rating']} </span>
