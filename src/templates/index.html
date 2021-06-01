@@ -4,11 +4,12 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.png">
     <title>Pergimakan</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <a href="#maincontent" class="skip-link">Menuju ke konten</a>
+    <a href="#main-content" class="skip-link">Menuju ke konten</a>
 
     <div class="hamburger-button">
         <button type="button" id="menu-button">
@@ -18,7 +19,7 @@
         </button>
     </div>
 
-<nav class="top-menu active">
+<nav id="top-menu-drawer" class="top-menu active">
     	
     <div class="components">
     
@@ -27,8 +28,8 @@
         </div>
         
         <ul class="navigation">
-            <li><a href="/">Home</a></li>
-            <li><a href="#">Favorite</a></li>
+            <li><a href="#/home">Home</a></li>
+            <li><a href="#/favorite">Favorite</a></li>
             <li><a href="https://github.com/biyanoscar">About Us</a></li>
         </ul>
     
@@ -44,9 +45,9 @@
     </div>
 </div>
 <main>
-    <section class="content" id="maincontent">
+    <section class="content" id="main-content">
         
-        <div class="latest">
+        <!-- <div class="latest">
             <h1 class="latest__label">Explore Restaurants</h1>
             <div id="restaurants" class="restaurants">
                 
@@ -54,13 +55,13 @@
                 
 
             </div>
-        </div>
+        </div> -->
     </section>
 </main>
 <footer>
     <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="#">Favorite </a></li>
+        <li><a href="#/home">Home</a></li>
+        <li><a href="#/favorite">Favorite </a></li>
         <li><a href="https://github.com/biyanoscar">About Us </a></li>
     </ul>
     <div class="footer-text">Copyright © 2021 - Pergimakan Apps</div>
