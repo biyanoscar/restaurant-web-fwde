@@ -314,6 +314,7 @@ footer a {
 .badge-rating {
   color: #fff;
   background-color: #00adb5;
+  font-size: 1em;
 }
 
 .badge-city {
@@ -345,4 +346,17 @@ footer a {
 
 .restaurant .restaurant__info h4 {
   margin: 8px 0;
+}
+
+.text-title {
+  color: #00adb5;
+}
+
+.review-member {
+  padding-bottom: 1.5rem;
+}
+
+.review-date {
+  font-size: 12px;
+  line-height: 1.5em;
 }

@@ -3,6 +3,16 @@
   grid-row-gap: 16px;
 }
 
+.drinks_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.foods_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 @media screen and (max-width: 499px) {
   .nav {
     z-index: 10;
@@ -68,9 +78,29 @@
     grid-column-end: 3;
   }
 
-  .restaurant .restaurant__overview {
+  .restaurant .restaurant__description {
     grid-column-start: 1;
     grid-column-end: 3;
+  }
+
+  .restaurant__reviews {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .drinks_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .foods_grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .reviews_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
@@ -87,6 +117,11 @@
   .nav__list {
     max-width: 800px;
     margin: 0 auto;
+  }
+
+  .foods_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
