@@ -1,4 +1,6 @@
 import data from '../../../DATA.json';
+import RestaurantDicodingSource from '../../data/restaurant-dicoding-source';
+import { createRestaurantItemTemplate } from '../templates/template-creator';
 
 const Home = {
   async render() {
@@ -17,33 +19,13 @@ const Home = {
 
   async afterRender() {
     // Fungsi ini akan dipanggil setelah render()
-    const { restaurants } = data;
+    const { restaurants } = await RestaurantDicodingSource.list();
     const restaurantsContainer = document.querySelector('#restaurants');
     restaurants.forEach((restaurant) => {
-      restaurantsContainer.innerHTML += this.createRestaurantItemTemplate(restaurant);
+      restaurantsContainer.innerHTML += createRestaurantItemTemplate(restaurant);
     });
   },
 
-  createRestaurantItemTemplate(restaurant) {
-    return `<article class="restaurant-item" tabindex="0">
-            <div class="list-card-image">
-                <div class="rating position-absolute">
-                    <span class="badge badge-rating">Rating: ${restaurant.rating} </span>
-                </div>
-                <div class="member-plan position-absolute">
-                    <span class="badge badge-city">${restaurant.city}</span>
-                </div>
-                <img class="restaurant-item__thumbnail"
-                    src="${restaurant.pictureId}"
-                    alt="${restaurant.name}">
-            </div>
-            <div class="restaurant-item__content">
-                <h1 class="restaurant-item__title">${restaurant.name}</h1>
-                <p class="restaurant-item__description text">${restaurant.description}</p>
-    
-            </div>
-        </article>`;
-  },
 };
 
 export default Home;
