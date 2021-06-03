@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-globals */
 import 'regenerator-runtime';
 import CacheHelper from './utils/cache-helper';
 
@@ -18,9 +19,9 @@ self.addEventListener('activate', (event) => {
 });
 
 self.addEventListener('fetch', (event) => {
-  console.log(event.request);
+  // console.log(event.request);
 
-//   event.respondWith(fetch(event.request));
+  //   event.respondWith(fetch(event.request));
   // TODO: Add/get fetch request to/from caches
   event.respondWith(CacheHelper.revalidateCache(event.request));
 });
