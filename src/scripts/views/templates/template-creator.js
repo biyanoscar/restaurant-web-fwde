@@ -12,6 +12,7 @@ const createRestaurantDetailTemplate = (restaurant) => `
     <h4>Rating</h4>
     <p>⭐️${restaurant.rating}</p>
   </div>
+  <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
   <div class="restaurant__description">
     <h3>Description</h3>
     <p>${restaurant.description}</p>
@@ -44,6 +45,19 @@ const createRestaurantDetailTemplate = (restaurant) => `
     </div>
   </div>
 
+  <div class="restaurant__reviews">
+    <h3>Leave Reviews</h3>
+    
+    <form target="dummyframe" action="${CONFIG.BASE_URL}review" method="post" id="myForm">
+      <input type="hidden" id="id" name="id" value="${restaurant.id}">
+      Name: <br>
+      <input type="text" class="form-element" name="name"><br>
+      Review:<br> 
+      <textarea type="text" class="form-element" name="review"></textarea><br>
+      <input type="submit" onclick=' window.location.reload();' value="Submit Review" class="btn-form">
+    </form>
+  </div>
+
 
   <div class="restaurant__reviews">
     <h3>Reviews</h3>
@@ -62,6 +76,8 @@ const createRestaurantDetailTemplate = (restaurant) => `
       
     </div>
   </div>
+
+  
 
   
 `;

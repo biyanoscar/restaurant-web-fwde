@@ -14,13 +14,15 @@ const Detail = {
   async afterRender() {
     // Fungsi ini akan dipanggil setelah render()
     const url = UrlParser.parseActiveUrlWithoutCombiner();
-    const { restaurant } = await RestaurantDicodingSource.detailRestaurant(url.id);
-    // console.log(restaurant);
     const restaurantsContainer = document.querySelector('#restaurant');
+    const { restaurant } = await RestaurantDicodingSource.detailRestaurant(url.id)
+      .catch((error) => {
+        // console.log(`<h1>${error.message}</h1>`); // 'An error has occurred: 404'
+        restaurantsContainer.innerHTML = `<h1>${error.message}</h1>`;
+      });
+
     restaurantsContainer.innerHTML = createRestaurantDetailTemplate(restaurant);
 
-    // const likeButtonContainer = document.querySelector('#likeButtonContainer');
-    // likeButtonContainer.innerHTML = createLikeButtonTemplate();
     LikeButtonInitiator.init({
       likeButtonContainer: document.querySelector('#likeButtonContainer'),
       restaurant: {

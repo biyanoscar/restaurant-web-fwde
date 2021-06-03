@@ -8,6 +8,10 @@ class RestaurantDicodingSource {
 
   static async detailRestaurant(id) {
     const response = await fetch(API_ENDPOINT.DETAIL(id));
+    if (!response.ok) {
+      const message = `An error has occured: ${response.status}`;
+      throw new Error(message);
+    }
     return response.json();
   }
 }

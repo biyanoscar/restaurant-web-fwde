@@ -1,4 +1,3 @@
-// import data from '../../../DATA.json';
 import RestaurantDicodingSource from '../../data/restaurant-dicoding-source';
 import { createRestaurantItemTemplate } from '../templates/template-creator';
 

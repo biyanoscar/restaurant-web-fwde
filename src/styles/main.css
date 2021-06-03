@@ -380,3 +380,15 @@ footer a {
   align-items: center;
   justify-content: center;
 }
+
+.form-element {
+  width: 100%;
+}
+
+.btn-form {
+  color: #fff;
+  background-color: #00adb5;
+  border-color: #00adb5;
+  padding: 0.7rem;
+  font-size: 1rem;
+}
