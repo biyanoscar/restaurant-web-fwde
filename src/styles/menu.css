@@ -116,9 +116,6 @@ a:focus {
   vertical-align: middle;
   z-index: 999;
 }
-.hamburger-button button:focus {
-  outline: 0;
-}
 
 .hamburger-button button span {
   display: block;
