@@ -24,6 +24,10 @@ const Favorite = {
     restaurants.forEach((restaurant) => {
       restaurantsContainer.innerHTML += createRestaurantItemTemplate(restaurant);
     });
+
+    if (restaurants.length === 0) {
+      restaurantsContainer.innerHTML += '<div class="restaurant-item__not__found">Tidak ada restoran untuk ditampilkan</div>';
+    }
   },
 };
 
