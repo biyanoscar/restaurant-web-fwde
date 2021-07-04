@@ -91,7 +91,7 @@ const createRestaurantItemTemplate = (restaurant) => `
     <div class="member-plan position-absolute">
         <span class="badge badge-city">${restaurant.city}</span>
     </div>
-    <img class="restaurant-item__thumbnail"
+    <img class="restaurant-item__thumbnail lazyload"
         src="${restaurant.pictureId ? CONFIG.BASE_IMAGE_URL + restaurant.pictureId : 'https://picsum.photos/id/666/800/450?grayscale'}"
         alt="${restaurant.name}">
 </div>
