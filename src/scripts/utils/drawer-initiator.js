@@ -17,8 +17,8 @@ const DrawerInitiator = {
 
   _closeDrawer(event, drawer, button) {
     event.stopPropagation();
-    drawer.classList.remove('active');
-    button.classList.add('menu-closed');
+    drawer.classList.add('active');
+    button.classList.remove('menu-closed');
   },
 };
 

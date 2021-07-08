@@ -94,13 +94,14 @@ body {
 
 .hero {
   display: flex;
+  background-repeat: no-repeat;
+  background-size: cover;
   align-items: center;
   min-height: 380px;
   width: 100%;
   text-align: center;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("/images/hero-image_2-small.jpg");
-  /* background-image: url("/images/heros/hero-image_2.jpg"); */
   background-position: center;
   background-color: green;
 }
@@ -385,6 +386,7 @@ footer a {
 
 .form-element {
   width: 100%;
+  padding: 0.9rem;
 }
 
 .btn-form {

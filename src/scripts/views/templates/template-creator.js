@@ -50,10 +50,14 @@ const createRestaurantDetailTemplate = (restaurant) => `
     
     <form target="dummyframe" action="${CONFIG.BASE_URL}review" method="post" id="myForm">
       <input type="hidden" id="id" name="id" value="${restaurant.id}">
-      Name: <br>
-      <input type="text" class="form-element" name="name"><br>
-      Review:<br> 
-      <textarea type="text" class="form-element" name="review"></textarea><br>
+      <label>
+        Name: 
+        <input type="text" class="form-element" name="name">
+      </label>
+      <label>
+        Review:
+        <textarea type="text" class="form-element" name="review"></textarea>
+      </label>
       <input type="submit" onclick=' window.location.reload();' value="Submit Review" class="btn-form">
     </form>
   </div>
@@ -92,7 +96,7 @@ const createRestaurantItemTemplate = (restaurant) => `
         <span class="badge badge-city">${restaurant.city}</span>
     </div>
     <img class="restaurant-item__thumbnail lazyload"
-        src="${restaurant.pictureId ? CONFIG.BASE_IMAGE_URL + restaurant.pictureId : 'https://picsum.photos/id/666/800/450?grayscale'}"
+        data-src="${restaurant.pictureId ? CONFIG.BASE_IMAGE_URL + restaurant.pictureId : 'https://picsum.photos/id/666/800/450?grayscale'}"
         alt="${restaurant.name}">
 </div>
 <div class="restaurant-item__content">
